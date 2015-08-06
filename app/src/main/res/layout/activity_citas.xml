@@ -1,0 +1,114 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar_kitkat_height"
+        android:background="?colorPrimary"/>
+
+    <android.support.v7.widget.Toolbar
+        android:layout_marginTop="@dimen/status_bar_margin_top"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ToolbarTheme" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="505dp">
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:singleLine="true"
+            android:id="@+id/fecha"
+            android:hint="Fecha"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/md_text"
+            android:layout_marginTop="106dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:singleLine="true"
+            android:id="@+id/hora"
+            android:gravity="center"
+            android:hint="Hora"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/md_text"
+            android:layout_marginTop="58dp"
+            android:layout_below="@+id/fecha"
+            android:layout_alignRight="@+id/cancelar"
+            android:layout_alignEnd="@+id/cancelar" />
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/medico"
+            android:gravity="center"
+            android:layout_below="@+id/hora"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="56dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/md_text"/>
+
+        <Button
+            android:id="@+id/crear"
+            android:layout_width="181dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Crear"
+            android:layout_gravity="center_horizontal"
+            android:background="?colorPrimary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/md_white_1000"
+            android:layout_alignTop="@+id/cancelar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/cancelar"
+            android:layout_width="181dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Cancelar"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/md_red_400"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/md_white_1000"
+            android:layout_below="@+id/medico"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eliminar"
+            android:text="Cancelar cita"
+            android:background="@color/md_green_400"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/md_white_1000"
+            android:layout_gravity="right|bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>
+
+
+
+
+
+
+
